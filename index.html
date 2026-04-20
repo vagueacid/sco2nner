@@ -116,13 +116,14 @@
         box-shadow: var(--box-shadow);
     }
 
-    .main-image {
-        width: 700px;
-        height: 700px;
-        display: block;
-        margin: 2rem auto;
-        box-shadow: var(--box-shadow);
-    }
+          .main-image {
+              max-width: 300px;
+              width: 100%; /* <-- Kleine Verbesserung für mobile Ansicht */
+              display: block;
+              margin: 2rem auto;
+              border-radius: 10px; /* <-- HIER DIE ÄNDERUNG */
+              box-shadow: var(--box-shadow);
+          }
 
     .features-list {
         list-style: none;
