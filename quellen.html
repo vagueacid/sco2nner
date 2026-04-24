@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quellen - sCO₂nner</title>
+<meta name="description" content="Wissenschaftliche Quellen und Referenzen für die CO₂-Berechnungen von sCO₂nner.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+<style>
+/* --- CSS Variablen --- */
+:root {
+--primary-color: #2E7D32;
+--primary-dark: #1B5E20;
+--secondary-color: #4CAF50;
+--accent-color: #66BB6A;
+--dark-color: #212121;
+--text-color: #424242;
+--light-color: #F5F5F5;
+--white-color: #FFFFFF;
+--border-radius: 12px;
+--box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+--box-shadow-hover: 0 8px 24px rgba(0, 0, 0, 0.12);
+--transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+/* --- Reset & Basis --- */
+
+{
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+body {
+font-family: 'Lato', sans-serif;
+line-height: 1.7;
+background: linear-gradient(135deg, #f5f7fa 0%, #e8f5e9 100%);
+color: var(--text-color);
+display: flex;
+flex-direction: column;
+min-height: 100vh;
+}
+
+.container {
+max-width: 1200px;
+margin: 0 auto;
+padding: 0 2rem;
+}
+
+h1, h2, h3 {
+font-family: 'Poppins', sans-serif;
+color: var(--primary-color);
+margin-bottom: 1.5rem;
+font-weight: 700;
+}
+
+h1 {
+font-size: 2.75rem;
+line-height: 1.2;
+background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
+}
+
+p {
+margin-bottom: 1.2rem;
+font-size: 1.05rem;
+}
+
+a {
+color: var(--secondary-color);
+text-decoration: none;
+transition: var(--transition);
+}
+
+a:hover {
+color: var(--primary-dark);
+}
+
+/* --- Header --- */
+.site-header {
+background: var(--white-color);
+padding: 1.2rem 0;
+box-shadow: var(--box-shadow);
+position: sticky;
+top: 0;
+z-index: 1000;
+backdrop-filter: blur(10px);
+}
+
+.site-header .container {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.site-header .logo {
+font-family: 'Poppins', sans-serif;
+font-size: 1.75rem;
+font-weight: 700;
+color: var(--primary-color);
+display: flex;
+align-items: center;
+gap: 0.5rem;
+transition: var(--transition);
+}
+
+.site-header .logo:hover {
+transform: translateY(-2px);
+color: var(--secondary-color);
+}
+
+.site-header .logo::before {
+content: '🌱';
+font-size: 1.5rem;
+}
+
+.site-header nav ul {
+display: flex;
+list-style: none;
+gap: 2rem;
+}
+
+.site-header nav a {
+font-weight: 600;
+padding: 0.5rem 1rem;
+border-radius: 8px;
+transition: var(--transition);
+}
+
+.site-header nav a:hover {
+background: var(--light-color);
+color: var(--primary-color);
+}
+
+/* --- Main Content --- */
+main {
+flex-grow: 1;
+padding: 3rem 0;
+}
+
+.page-header {
+background: var(--white-color);
+padding: 3rem;
+margin-bottom: 2rem;
+border-radius: var(--border-radius);
+box-shadow: var(--box-shadow);
+text-align: center;
+}
+
+.page-header p {
+font-size: 1.15rem;
+color: var(--text-color);
+max-width: 800px;
+margin: 0 auto;
+}
+
+.content-card {
+background: var(--white-color);
+padding: 3rem;
+border-radius: var(--border-radius);
+box-shadow: var(--box-shadow);
+}
+
+/* --- Quellen Liste --- */
+.sources-list {
+list-style: none;
+counter-reset: sources-counter;
+display: grid;
+gap: 1.5rem;
+}
+
+.sources-list li {
+counter-increment: sources-counter;
+padding: 1.5rem;
+padding-left: 5rem;
+position: relative;
+background: linear-gradient(135deg, #f5f5f5 0%, #e8f5e9 100%);
+border-radius: 10px;
+border-left: 4px solid var(--secondary-color);
+transition: var(--transition);
+font-size: 0.95rem;
+line-height: 1.6;
+}
+
+.sources-list li:hover {
+transform: translateX(8px);
+box-shadow: var(--box-shadow);
+}
+
+.sources-list li::before {
+content: counter(sources-counter);
+position: absolute;
+left: 1.5rem;
+top: 1.5rem;
+width: 40px;
+height: 40px;
+background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+color: var(--white-color);
+border-radius: 50%;
+display: flex;
+justify-content: center;
+align-items: center;
+font-weight: bold;
+font-size: 1rem;
+font-family: 'Poppins', sans-serif;
+}
+
+.sources-list a {
+word-break: break-all;
+font-weight: 600;
+}
+
+/* --- Footer --- */
+.site-footer {
+background: linear-gradient(135deg, var(--dark-color) 0%, #1B5E20 100%);
+color: var(--white-color);
+text-align: center;
+padding: 2rem 0;
+margin-top: auto;
+}
+
+.site-footer p {
+margin-bottom: 0.5rem;
+}
+
+.site-footer a {
+color: var(--accent-color);
+font-weight: 600;
+}
+
+.site-footer a:hover {
+color: var(--white-color);
+text-decoration: underline;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+h1 {
+font-size: 2rem;
+}
+
+          
+.site-header .container {
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.site-header nav ul {
+    gap: 1rem;
+}
+
+.page-header,
+.content-card {
+    padding: 2rem 1.5rem;
+}
+
+.sources-list li {
+    padding: 1.2rem;
+    padding-left: 4rem;
+}
+
+.sources-list li::before {
+    width: 35px;
+    height: 35px;
+    left: 1rem;
+    font-size: 0.9rem;
+}
+
+.container {
+    padding: 0 1.5rem;
+}
+
+        
+}
+
+@media (max-width: 480px) {
+h1 {
+font-size: 1.75rem;
+}
+
+          
+.site-header .logo {
+    font-size: 1.5rem;
+}
+
+.page-header,
+.content-card {
+    padding: 1.5rem 1rem;
+}
+
+.sources-list li {
+    padding: 1rem;
+    padding-left: 3.5rem;
+    font-size: 0.9rem;
+}
+
+.sources-list li::before {
+    width: 30px;
+    height: 30px;
+    left: 0.8rem;
+    font-size: 0.85rem;
+}
+
+        
+}
+</style>
+
+</head>
+<body> <header class="site-header">
+<div class="container">
+<a href="./index.html" class="logo">sCO₂nner</a>
+<nav>
+<ul>
+<li><a href="./index.html">Startseite</a></li>
+<li><a href="./quellen.html">Quellen</a></li>
+</ul>
+</nav>
+</div>
+</header> <main>
+<div class="container">
+<div class="page-header">
+<h1>Wissenschaftliche Quellen</h1>
+<p>Alle CO₂-Berechnungen in sCO₂nner basieren auf wissenschaftlichen Studien, offiziellen Datenbanken und anerkannten Umweltorganisationen. Hier findest du eine vollständige Liste unserer Referenzen.</p>
+</div>
+          
+    <div class="content-card">
+        <ol class="sources-list">
+            <li>Studysmarter. Wie viele Blätter hat ein Baum? Studysmarter, 2026. <a href="https://www.studysmarter.de" target="_blank">https://www.studysmarter.de</a>. (Zugriff: 10.03.2026).</li>
+            <li>EEB Süd-West. Bäume gegen Klimawandel. EEB Süd-West, 2026. <a href="https://eeb-sued-west.de" target="_blank">https://eeb-sued-west.de</a>. (Zugriff: 10.03.2026).</li>
+            <li>Open Food Facts. Edel Vollmilch, Ritter Sport (Produktseite). Open Food Facts, 2026. <a href="https://de.openfoodfacts.org" target="_blank">https://de.openfoodfacts.org</a>. (Zugriff: 15.03.2026).</li>
+            <li>Poore, J., & Nemecek, T. Reducing food's environmental impacts through producers and consumers. Science, 2018. <a href="https://science.org" target="_blank">https://science.org</a>. (Zugriff: 12.03.2026).</li>
+            <li>Our World in Data. Environmental impacts of food. Our World in Data, 2018. <a href="https://ourworldindata.org" target="_blank">https://ourworldindata.org</a>. (Zugriff: 12.03.2026).</li>
+            <li>Food and Agriculture Organization of the United Nations. Greenhouse gas emissions from the dairy sector — A life cycle assessment. FAO, 2010. <a href="https://www.fao.org" target="_blank">https://www.fao.org</a>. (Zugriff: 12.03.2026).</li>
+            <li>Global Logistics Emissions Council. GLEC Framework. Smart Freight Centre, 2020. <a href="https://www.smartfreightcentre.org" target="_blank">https://www.smartfreightcentre.org</a>. (Zugriff: 12.03.2026).</li>
+            <li>Department for Environment, Food & Rural Affairs (DEFRA). Emission factors for greenhouse gas reporting. UK Government, 2026. <a href="https://www.gov.uk" target="_blank">https://www.gov.uk</a>. (Zugriff: 12.03.2026).</li>
+            <li>PlasticsEurope. Plastics — the Facts 2021. PlasticsEurope, 2021. <a href="https://plasticseurope.org" target="_blank">https://plasticseurope.org</a>. (Zugriff: 12.03.2026).</li>
+            <li>Umweltbundesamt. Treibhausgasemissionen des deutschen Strommixes (Jährliche Daten, 2023). Umweltbundesamt, 2023. <a href="https://www.umweltbundesamt.de" target="_blank">https://www.umweltbundesamt.de</a>. (Zugriff: 12.03.2026).</li>
+            <li>Ritter Sport. Nachhaltigkeit (Laufende Unternehmenskommunikation). Alfred Ritter GmbH & Co. KG, 2026. <a href="https://www.ritter-sport.com" target="_blank">https://www.ritter-sport.com</a>. (Zugriff: 12.03.2026).</li>
+            <li>PV Magazine. Ritter Sport nimmt eigenen Solarpark in Betrieb (24.10.2023). PV Magazine, 2023. <a href="https://www.pv-magazine.de" target="_blank">https://www.pv-magazine.de</a>. (Zugriff: 12.03.2026).</li>
+            <li>IFEU. Ökologische Fußabdrücke von Lebensmitteln und Gerichten in Deutschland. IFEU, 2026. <a href="https://www.ifeu.de" target="_blank">https://www.ifeu.de</a>. (Zugriff: 12.03.2026).</li>
+            <li>Ecoinvent. Ecoinvent database v3.x (Laufende Datenbank). Ecoinvent, 2026. <a href="https://www.ecoinvent.org" target="_blank">https://www.ecoinvent.org</a>. (Zugriff: 12.03.2026).</li>
+            <li>GHG Protocol. A corporate accounting and reporting standard. World Resources Institute & World Business Council for Sustainable Development, 2004. <a href="https://ghgprotocol.org" target="_blank">https://ghgprotocol.org</a>. (Zugriff: 12.03.2026).</li>
+            <li>International Dairy Federation (IDF). Life cycle assessment of dairy products (Diverse Publikationen). IDF, 2026. <a href="https://www.fil-idf.org" target="_blank">https://www.fil-idf.org</a>. (Zugriff: 12.03.2026).</li>
+            <li>Smart Freight Centre. Global Logistics Emissions Council (GLEC) Framework. Smart Freight Centre, 2020. <a href="https://www.smartfreightcentre.org" target="_blank">https://www.smartfreightcentre.org</a>. (Zugriff: 12.03.2026).</li>
+            <li>Poore, J., & Nemecek, T. Reducing food's environmental impacts through producers and consumers. Science, 2018. <a href="https://science.org" target="_blank">https://science.org</a>. (Zugriff: 12.03.2026).</li>
+            <li>Food and Agriculture Organization of the United Nations. Greenhouse gas emissions from the dairy sector — A life cycle assessment. FAO, 2010. <a href="https://www.fao.org" target="_blank">https://www.fao.org</a>. (Zugriff: 12.03.2026).</li>
+            <li>Open Food Facts. Kerrygold Original Irische Butter aus Weidemilch (Produkt 4001954161010) (Produktseite). Open Food Facts, 2026. <a href="https://de.openfoodfacts.org" target="_blank">https://de.openfoodfacts.org</a>. (Zugriff: 15.03.2026).</li>
+            <li>Poore, J., & Nemecek, T. Reducing food's environmental impacts through producers and consumers. Science, 2018. <a href="https://science.org" target="_blank">https://science.org</a>. (Zugriff: 12.03.2026).</li>
+            <li>Ecoinvent. Ecoinvent database v3.x (Laufende Datenbank). Ecoinvent, 2026. <a href="https://www.ecoinvent.org" target="_blank">https://www.ecoinvent.org</a>. (Zugriff: 12.03.2026).</li>
+            <li>Department for Environment, Food & Rural Affairs (DEFRA). Emission factors for greenhouse gas reporting. UK Government, 2026. <a href="https://www.gov.uk" target="_blank">https://www.gov.uk</a>. (Zugriff: 12.03.2026).</li>
+            <li>Global Logistics Emissions Council. GLEC Framework. Smart Freight Centre, 2020. <a href="https://www.smartfreightcentre.org" target="_blank">https://www.smartfreightcentre.org</a>. (Zugriff: 12.03.2026).</li>
+            <li>Umweltbundesamt. Treibhausgasemissionen des deutschen Strommixes (Jährliche Daten, 2023). Umweltbundesamt, 2023. <a href="https://www.umweltbundesamt.de" target="_blank">https://www.umweltbundesamt.de</a>. (Zugriff: 12.03.2026).</li>
+            <li>International Journal of Life Cycle Assessment. Review articles on agricultural LCI and packaging energy (Diverse Veröffentlichungen). Springer, 2026. <a href="https://link.springer.com" target="_blank">https://link.springer.com</a>. (Zugriff: 12.03.2026).</li>
+            <li>Journal of Cleaner Production. Systematic reviews and cradle to gate LCAs for cereals/haferflocken (Diverse Veröffentlichungen). Elsevier, 2026. <a href="https://www.sciencedirect.com" target="_blank">https://www.sciencedirect.com</a>. (Zugriff: 12.03.2026).</li>
+            <li>GHG Protocol. A corporate accounting and reporting standard. World Resources Institute & World Business Council for Sustainable Development, 2004. <a href="https://ghgprotocol.org" target="_blank">https://ghgprotocol.org</a>. (Zugriff: 12.03.2026).</li>
+            <li>Open Food Facts. Haferflocken, Blütenzarte Köllnflocken – Kölln – 500g (Produktseite). Open Food Facts, 2026. <a href="https://de.openfoodfacts.org" target="_blank">https://de.openfoodfacts.org</a>. (Zugriff: 15.03.2026).</li>
+            <li>UFZ. Abhängigkeiten von Ökosystemleistungen und Umwelteinwirkungen entlang der Wertschöpfungskette (LCA Übersicht Lebensmittelketten). UFZ, 2026. <a href="https://www.ufz.de" target="_blank">https://www.ufz.de</a>. (Zugriff: 15.03.2026).</li>
+        </ol>
+        
+        <p style="margin-top: 3rem; padding-top: 2rem; border-top: 2px solid var(--light-color); text-align: center; color: var(--text-color);">
+            <em>Die vollständige Liste aller 189 Quellen ist in der App verfügbar. Hier werden die ersten 30 Referenzen angezeigt.</em>
+        </p>
+    </div>
+</div>
+
+        
+</main> <footer class="site-footer">
+<div class="container">
+<p><a href="#">Impressum</a></p>
+<p>&copy; 2026 BUH Studios. Alle Rechte vorbehalten.</p>
+</div>
+</footer> </body>
+</html>
